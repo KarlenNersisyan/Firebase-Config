@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import Loading from "./components/Loading";
 import { useAuth } from "./hooks/useAuth.hook";
 
 const AuthenticatedApp = lazy(() => import("./components/AuthenticatedApp"));
@@ -12,13 +13,23 @@ function App() {
   console.log("USER::", user);
 
   if (user === null) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
   }
 
   return (
     <div className="App">
       <h1>Firebase Config</h1>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <div>
+            <Loading />
+          </div>
+        }
+      >
         {user ? <AuthenticatedApp /> : <UnAuthenticatedApp />}
       </Suspense>
     </div>
