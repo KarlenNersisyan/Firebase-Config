@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>App</h1>
+      <h1>Firebase Config</h1>
       <Suspense fallback={<div>Loading...</div>}>
         {user ? <AuthenticatedApp /> : <UnAuthenticatedApp />}
       </Suspense>
