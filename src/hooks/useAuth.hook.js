@@ -40,7 +40,7 @@ function useProvideAuth() {
       .createUserWithEmailAndPassword(email, password)
       .then((response) => {
         response.user.sendEmailVerification();
-        addUser({ email, password, uid: response.user.uid });
+        addUser({ email, uid: response.user.uid });
         setUser(response.user);
         return response.user;
       });
