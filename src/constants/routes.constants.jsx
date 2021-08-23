@@ -1,6 +1,6 @@
-import Home from "../pages/Home.pages";
-import LogIn from "../pages/LogIn.pages";
-import SignIn from "../pages/SignIn.pages";
+import Home from "../pages/Home/Home.pages";
+import LogIn from "../pages/Login/Login.pages";
+import SignIn from "../pages/SignUp/Signin.pages";
 
 const routes = {
   login: () => ({

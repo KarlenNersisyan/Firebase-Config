@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useAuth } from "../hooks/useAuth.hook";
 
-export default function LogIn() {
+export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { signin } = useAuth();
+  const { signup } = useAuth();
 
-  const handleSignIn = () => {
-    return signin(email, password)
+  const handleSignUp = () => {
+    return signup(email, password)
       .then((res) => {
         console.log("success::", res);
       })
@@ -17,10 +17,10 @@ export default function LogIn() {
   return (
     <div>
       <div>
-        <h1>LogIn</h1>
+        <h1>Sign Up</h1>
         <input value={email} onChange={(e) => setEmail(e.target.value)} />
         <input value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button onClick={handleSignIn}>Log In with Email Link</button>
+        <button onClick={handleSignUp}>Sign Up with Email Link</button>
       </div>
     </div>
   );
