@@ -8,6 +8,8 @@ export default firebase.initializeApp({
   projectId: process.env.REACT_APP_PROJECT_ID,
   appID: process.env.REACT_APP_APP_ID,
   databaseURL: process.env.REACT_APP_DB_URL,
+  messagingSenderId: process.env.REACT_APP_MS,
+  storageBucket: process.env.REACT_APP_SB,
 });
 
 export const db = firebase.database();
