@@ -49,7 +49,7 @@ export default function LogIn() {
         style={{ width: "20%", marginLeft: "40%" }}
         onClick={handleSignIn}
       >
-        CONFIRM
+        LOGIN
       </button>
       <span>
         To register: <Link to="/signup">SignUp</Link>

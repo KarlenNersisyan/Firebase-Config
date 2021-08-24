@@ -8,8 +8,7 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const { signup } = useAuth();
 
-  const handleSignUp = (event) => {
-    event.preventDefault();
+  const handleSignUp = () => {
     return signup(email, password)
       .then((res) => {
         alert("You have successfully registered.");
