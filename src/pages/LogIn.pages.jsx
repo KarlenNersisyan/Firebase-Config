@@ -18,9 +18,7 @@ export default function LogIn() {
   return (
     <div
       style={{
-        width: "50%",
-        marginLeft: "25%",
-        height: "280px",
+        height: "310px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -46,7 +44,7 @@ export default function LogIn() {
         />
       </div>
       <button
-        style={{ width: "20%", marginLeft: "40%" }}
+        style={{ width: "30%", marginLeft: "35%" }}
         onClick={handleSignIn}
       >
         LOGIN

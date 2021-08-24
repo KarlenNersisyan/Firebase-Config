@@ -20,9 +20,9 @@ export default function SignUp() {
   return (
     <div
       style={{
-        width: "28%",
-        marginLeft: "36%",
-        height: "280px",
+        width: "70%",
+        marginLeft: "15%",
+        height: "210px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -42,7 +42,7 @@ export default function SignUp() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <Link style={{ width: "20%", marginLeft: "40%" }} to="/signup">
+      <Link style={{ width: "30%", marginLeft: "35%" }} to="/signup">
         <button onClick={handleSignUp}>SIGNUP</button>
       </Link>
       <span>

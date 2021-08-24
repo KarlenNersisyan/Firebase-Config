@@ -11,13 +11,16 @@ export default function Home() {
     updateProfile(user.uid, {
       description,
     });
+    alert("Thank you, your details have been updated.")
   };
 
   return (
-    <div className='App2'>
+    <>
       <h1>Home</h1>
 
-      <h3>Hi, {user.displayName || user.email}</h3>
+      <h3 style={{ wordBreak: " break-all" }}>
+        Hi, {user.displayName || user.email}
+      </h3>
 
       {!user.emailVerified && <p>Please, verify your email.</p>}
 
@@ -35,8 +38,10 @@ export default function Home() {
         <button onClick={handleStatusUpd}>Save Description</button>
       </div>
       <Link to="/">
-        <button style={{ marginTop: "5px" }}  onClick={signout}>LOGOUT</button>
+        <button style={{ marginTop: "5px" }} onClick={signout}>
+          LOGOUT
+        </button>
       </Link>
-    </div>
+    </>
   );
 }
