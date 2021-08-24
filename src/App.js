@@ -10,8 +10,6 @@ const UnAuthenticatedApp = lazy(() =>
 function App() {
   const { user } = useAuth();
 
-  console.log("USER::", user);
-
   if (user === null) {
     return (
       <div>
@@ -22,7 +20,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Firebase Config</h1>
       <Suspense
         fallback={
           <div>

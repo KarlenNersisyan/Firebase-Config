@@ -1,12 +1,17 @@
 import { Switch, Route } from "react-router-dom";
-import routes from "../constants/routes.constants";
 import LogIn from "../pages/LogIn.pages";
+import SignUp from "../pages/SignUp.pages";
 
 export default function UnAuthenticatedApp() {
   return (
     <div>
       <Switch>
-        <Route route="*" component={LogIn} />
+        <Route path="/signup">
+          <SignUp />
+        </Route>
+        <Route exact path="/">
+          <LogIn />
+        </Route>
       </Switch>
     </div>
   );

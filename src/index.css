@@ -13,6 +13,34 @@ code {
     monospace;
 }
 
-.App{
+.App {
   text-align: center;
+  margin-top: 100px;
+}
+
+input[type="email"] {
+  padding-left: 9px;
+  height: 30px;
+  outline: none;
+  border-radius: 15px;
+  border: none;
+}
+input[type="password"] {
+  padding-left: 9px;
+  height: 30px;
+  outline: none;
+  border-radius: 15px;
+  border: none;
+}
+button {
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 25px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
 }

@@ -1,18 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth.hook";
 
 export default function LogIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { signup, signin } = useAuth();
-
-  const handleSignUp = () => {
-    return signup(email, password)
-      .then((res) => {
-        console.log("success::", res);
-      })
-      .catch((e) => alert(e.message));
-  };
+  const { signin } = useAuth();
 
   const handleSignIn = () => {
     return signin(email, password)
@@ -23,20 +16,44 @@ export default function LogIn() {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        width: "50%",
+        marginLeft: "25%",
+        height: "280px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
+      <h1> Welcome our website </h1>
+      <h3> Login </h3>
       <div>
-        <h1>Sign Up</h1>
-        <input value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button onClick={handleSignUp}>Sign Up with Email Link</button>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autoComplete=""
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
       </div>
-
       <div>
-        <h1>LogIn</h1>
-        <input value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button onClick={handleSignIn}>Log In with Email Link</button>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
       </div>
+      <button
+        style={{ width: "20%", marginLeft: "40%" }}
+        onClick={handleSignIn}
+      >
+        CONFIRM
+      </button>
+      <span>
+        To register: <Link to="/signup">SignUp</Link>
+      </span>
     </div>
   );
 }
